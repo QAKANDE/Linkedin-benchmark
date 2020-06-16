@@ -1,3 +1,29 @@
+#bckimage{
+    width:100%;
+    height:100%;
+}
+#bckDiv{
+    height:300px;
+}
+#imageWrapper{
+    height:175px !important;
+    width:175px !important;
+    position: relative;
+    top:-100px;
+    left:50px;
+    margin-right: 0px;
+    display:inline-block;
+}
+#editWrapper{
+    display:inline-block;
+    position: relative;
+}
+#profilePic{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    border: 5px solid #dde7f0;
+}
 .jumbo{
 background-image: url("https://miro.medium.com/max/1124/1*92adf06PCF91kCYu1nPLQg.jpeg");
 }

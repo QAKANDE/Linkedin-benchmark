@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './ExperienceLayout.css'
 class ExperienceLayout extends Component {
     render() { 
         return ( 
             <div className="d-flex flex-row">
-        <img src="https://via.placeholder.com/150"></img>
+    <img className="profilePic mx-1" src="https://image.shutterstock.com/image-vector/profile-blank-icon-empty-photo-260nw-535853269.jpg" alt="Profile pic" />
            <ul id="experience-list">
         <li id="job">{this.props.bridgerole}</li>
         <li>{this.props.bridgecompany}</li>

@@ -27,7 +27,7 @@ class Experience extends Component {
             <div className="experience-wrapper">
             <div className="mx-3 d-flex justify-content-between">
                 <h3>Experience</h3>
-                <p>Symbol</p>
+                <i class="fa mt-2 fa-2x fa-edit"></i>
             </div>
             {this.state.experience.map((data,index)=>
             <ExperienceLayout bridgerole={data.role} bridgecompany={data.company}

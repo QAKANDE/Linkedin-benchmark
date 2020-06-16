@@ -53,15 +53,11 @@ class Profile extends Component {
            </div>
                <div className='container d-flex justify-content-between'>
                <h3 className="ml-3">{this.state.details.name} {this.state.details.surname}</h3>
-               <h3 className="ml-3">placeholder</h3>
+        <span className="ml-3">{this.state.details.email}</span>
                </div>
                <div className='container d-flex justify-content-between'>
-               <h5 style={{fontWeight:"normal"}} className="ml-3">{this.state.details.email}</h5>
+               <h5 style={{fontWeight:"normal"}} className="ml-3">{this.state.details.area}</h5>
         <h5 style={{fontWeight:"normal"}} className="ml-3">{this.state.details.title}</h5>
-               </div>
-               <div className='container d-flex justify-content-between'>
-        <h5 style={{fontWeight:"normal"}} className="ml-3">{this.state.details.area}</h5>
-               <h5 style={{fontWeight:"normal"}} className="ml-3">CTO</h5>
                </div>
             
             </div>

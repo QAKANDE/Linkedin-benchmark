@@ -5,3 +5,11 @@ p{
 .detailList{
     list-style: none;
 }
+.logo{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+}
+div > span{
+    font-size: medium;
+}

@@ -22,23 +22,24 @@ class Viewed extends Component {
      }
     render() { 
         return (
-            <div>
+            <div className="mt-4">
+                <span>People Also Viewed</span>
                 {this.state.details.slice(0,6).map((detail,index) =>   
                 <Row key={index}>
                     <Col>
-                    <img className='logo mx-5' alt='' src="https://lh3.googleusercontent.com/8YxVXk8qc-a7YXIrZ9eaqNY4NNkDR6kjooHE5Weg_Pz6R5yd1I2QwZ9vSjfK0aiFkLbdhQ=s85"></img>
+                    <img className='logo mx-2' alt='' src="https://image.shutterstock.com/image-vector/profile-blank-icon-empty-photo-260nw-535853269.jpg"></img>
                     </Col>
                     <Col>
                     <Row>
                         <Col>
                         <ul className="detailList">
                 <li><p>{detail.name}<small className="mx-1">{detail.surname}</small></p></li> 
-                <li>{detail.area}</li> 
+                {/* <li>{detail.area}</li>  */}
                         </ul>
                         </Col>
                     </Row>
                     </Col>
-                    <Col><i className="fa fa-sticky-note mx-1"></i></Col>
+                    <Col></Col>
                 </Row>
                 )}
             </div>
