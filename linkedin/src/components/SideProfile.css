@@ -1,0 +1,18 @@
+
+p{
+    color: rgba(0,0,0,.6);
+}
+.wrapper{
+    width: 312px;
+}
+
+#discount{
+    background-color:white;
+    height: 261px;
+    width: 312px;
+    border: grey 2px solid;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+}

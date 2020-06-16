@@ -1,0 +1,13 @@
+
+#experience-list li{
+    list-style: none;
+}
+#job{
+    font-weight: bold;
+}
+#experience-date{
+    color: grey;
+}
+#experience-area{
+    color: grey;
+}

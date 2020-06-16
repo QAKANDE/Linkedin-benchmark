@@ -1,0 +1,20 @@
+  
+.linkedIn {
+    width: 40px;
+    height: 40px;
+    color: #0090C0;
+    background-color: #ffffff;
+  
+}
+
+.NavList {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    color: grey !important;
+    font-weight: 500;
+}
+#basic-nav-dropdown{
+    color: grey !important;
+}

@@ -1,0 +1,16 @@
+
+.profilewrap{
+  border:grey solid 1px;
+  background-color: white;
+}
+.aboutwrap{
+  border:grey solid 1px;
+    background-color: white;
+}
+.experiencewrap{
+  border:grey solid 1px;
+  background-color: white;
+}
+.App{
+  background-color: #dde7f0;
+}
