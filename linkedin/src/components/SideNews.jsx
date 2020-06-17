@@ -34,7 +34,7 @@ const SideNews = ()=>{
                     <span><i class="fa fa-plus mr-5 "></i></span>
                     </Col>
                 </Row>
-                <div><a href="#" className= "offers">View all recommendations</a></div>
+                <div><a href="#" id= "offers">View all recommendations</a></div>
                 </div>
                 
                 <Row className = "d-flex">
@@ -48,6 +48,40 @@ const SideNews = ()=>{
                     </div>
                     </Col>
                 </Row>
+                
+                    <Row className = "mb-2">
+                        <Col><a href="#">About</a></Col>
+                        <Col> <a href="#">Accessibility</a></Col>
+                        <Col> <a href="#">Help Center</a></Col>
+
+                    </Row>
+                    <Row className = "mb-2">
+                        <Col lg={6}>
+                        <select id="privacy">
+                        <option>
+                        Privacy and Terms
+                         </option>
+                       </select>
+                        </Col>
+                        <Col lg={4}><a href="#">Add Choices</a></Col>
+                        <Col lg={2}> <a href="#">Advertising</a></Col>
+                    </Row>
+                    <Row className = "mb-2">
+                        <Col lg={6}>
+                        <select id="privacy">
+                        <option>
+                        Business Services
+                         </option>
+                       </select>
+                        </Col>
+                        <Col lg={6}><a href="#">Get the Linkedin App</a></Col>
+                         </Row>
+                         <Row className= "d-flex justify-content-center align-items-center">
+                             <Col lg={6} className = "ml-5"><a href="#">More</a></Col>
+                         </Row>
+
+               
+               
                 </div>        
           </>     
     )
