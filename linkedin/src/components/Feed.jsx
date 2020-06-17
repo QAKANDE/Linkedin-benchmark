@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Feed.css'
+import Post from './Post'
 class Feed extends Component {
     state = { 
         posts:[]
@@ -21,7 +22,7 @@ class Feed extends Component {
         return (   
             <>
             <div className="create-post">
-                Arbiona
+            <Post />
             </div> 
             {this.state.posts.map((post,index)=>
         <div className='feedwrapper mt-2' key={index}>
@@ -31,7 +32,7 @@ class Feed extends Component {
             </div>
             <hr></hr>
             <div className="d-flex flex-row">
-    <img className="profilePic mx-1" src="https://image.shutterstock.com/image-vector/profile-blank-icon-empty-photo-260nw-535853269.jpg" alt="Profile pic" />
+    <img className="profilePic mx-1" src={post.user.image} alt="Profile pic" />
            <ul id="experience-list">
             <li id="job">{post.user.name} {post.user.surname}</li>
             <li>{post.user.bio}</li>

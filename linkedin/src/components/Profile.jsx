@@ -30,7 +30,7 @@ class Profile extends Component {
         </Jumbotron>
         <div className="d-flex flex-row" style={{height:"75px"}}>
                         <div id="imageWrapper" className="">
-                            <img id="profilePic" src="https://image.shutterstock.com/image-vector/profile-blank-icon-empty-photo-260nw-535853269.jpg" alt="Profile pic"/>
+                            <img id="profilePic" src={this.state.details.image} alt="Profile pic"/>
                         </div>
                         <div id="editWrapper" className="ml-auto d-flex flex-row">
                             <div className="my-3">  

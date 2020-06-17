@@ -27,7 +27,7 @@ class Viewed extends Component {
                 {this.state.details.slice(0,6).map((detail,index) =>   
                 <Row key={index}>
                     <Col>
-                    <img className='logo mx-2' alt='' src="https://image.shutterstock.com/image-vector/profile-blank-icon-empty-photo-260nw-535853269.jpg"></img>
+                    <img className='logo mx-2' alt='' src={detail.image}></img>
                     </Col>
                     <Col>
                     <Row>

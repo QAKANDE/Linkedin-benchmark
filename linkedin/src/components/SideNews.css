@@ -32,3 +32,8 @@ Button.outline-primary{
     cursor: pointer;
     
 }
+
+.cards{
+    background-image: url("https://scontent.fume1-1.fna.fbcdn.net/v/t1.0-9/154846_176913378991706_5379403_n.jpg?_nc_cat=100&_nc_sid=cdbe9c&_nc_oc=AQmdd2B7uUoCIBGMw4dCyvho76IZji29FMQR4LCDBQgzfOB2zwGTOkRlx9-Z2Qy28zY&_nc_ht=scontent.fume1-1.fna&oh=2aed2b78bc39e664cf45d4c011277a75&oe=5F0D1E0E");
+    background-repeat: no-repeat;
+}

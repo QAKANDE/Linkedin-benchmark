@@ -28,11 +28,15 @@
 background-image: url("https://miro.medium.com/max/1124/1*92adf06PCF91kCYu1nPLQg.jpeg");
 }
 #input-group-dropdown-1{
- background-color:#0073b1;
+ background-color:#0073b1 !important;
  color: white;
+ height: auto;
+ width: auto;
 }
 .morebtn{
     border: grey 1px solid !important;
     background-color: white !important;
     color: grey !important;
+    height: auto !important;
+    width: auto !important;
 }

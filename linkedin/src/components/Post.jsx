@@ -2,16 +2,10 @@ import React, { Component } from 'react'
 import { Form, FormGroup, FormControl, Button } from 'react-bootstrap'
 import { FaCamera, FaVideo, FaStickyNote, FaPenSquare } from 'react-icons/fa'
 import "./Post.css"
-
 class Post extends Component {
-    state = {
-        text: ""
-    }
-
     render() {
-        let { text } = this.state;
         return (
-            <Form>
+            <Form id='form'>
                 <span className="a d-block">
                     <button className="btn-post">
                         <span>
@@ -33,10 +27,8 @@ class Post extends Component {
                         <small className="c" style={{ color: "#666666" }}>on LinkedIn</small>
                     </span>
                 </button>
-
             </Form >
         )
     }
 }
-
 export default Post

@@ -8,10 +8,9 @@ import Experience from './components/Experience'
 import About from './components/About'
 import{BrowserRouter as Router, Route} from 'react-router-dom'
 import SideNews from './components/SideNews'
-function App() {
+function App(props) {
 
   return (
-    <>
     <div className="App">
   <Container>
  <Row className="mx-2">
@@ -29,17 +28,11 @@ function App() {
    <Col lg={4}>
      <div className="mt-5">
     <SideProfile/>
-    <Post />
      </div>
    </Col>
  </Row>
       </Container>
    </div>
-   
-  
-   </>
-
-
   );
 }
 

@@ -1,17 +1,22 @@
+
+#form{
+  height: auto;
+  border:grey solid 1px;
+  width:auto;
+}
 .btn:hover
 {
 background-image:none !important;
 background-color:rgb(243,246,248) !important;
 }
-
 .btn {
     align-items: flex-start;
     background-color: hsl(0, 0%, 100%) !important;
     outline-style: solid;
     outline-color: hsl(210, 14%, 83%);
     border: 0;
-    height:4.5625rem;
-    width:4.5rem;
+    /* height:4.5625rem;
+    width:4.5rem; */
     cursor: pointer;
   }
   /* Darker background on mouse-over */
@@ -27,8 +32,8 @@ background-color:rgb(243,246,248) !important;
     outline-style: solid;
     outline-color: hsl(210, 14%, 83%);
     border: 0;
-    height:4.5625rem;
-    width:20.875rem;
+    /* height:4.5625rem;
+    width:20.875rem; */
     cursor: pointer;
   }  
   .b {
@@ -44,13 +49,12 @@ background-color:rgb(243,246,248) !important;
   }
     .btn-post-article {
     font-style: normal;
-    width:34.375rem;
-    height: 2.75rem;
+    /* width:34.375rem;
+    height: 2.75rem; */
     background-color: #F3F6F8 !important;
     outline-style: solid;
     outline-color: hsl(210, 14%, 83%);
     border: 0;
-
   }
   .article-link {
       color: #0084C4;
@@ -68,14 +72,9 @@ background-color:rgb(243,246,248) !important;
   .pen{
     float: left;
   }
-  
-
   .c {
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif !important;
     color: #666666;
     margin-right: 21.5rem;
-
   }
-  
-
