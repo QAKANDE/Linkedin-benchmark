@@ -16,7 +16,7 @@ export class Footer extends Component {
                   <select id="privacy">
                     <option>
                       Privacy and Terms
-                      </option>
+                      </option>   
                   </select>
                 </a>
                 <a href="/">Sales Solutions</a>
