@@ -2,7 +2,7 @@
     position: absolute;
     left:25px;
     top: 18px;
-    color: blue;
+    color: #0073b1;
 }
 Button.outline-primary{
     position: relative;
@@ -13,7 +13,12 @@ Button.outline-primary{
 
 
 .feed, .offers{
-    font-size:1.4rem;
+    font-size:1.2rem;
+    
+}
+#offers{
+    color: #0073b1;
+    font-weight: 600;
 }
 
 .fa-hashtag{
@@ -32,3 +37,31 @@ Button.outline-primary{
     cursor: pointer;
     
 }
+#privacy {
+    border: none;
+    
+    margin-right: 2px;
+  }
+  a{
+      color: color#485d69;
+  }
+
+  a:hover{
+      text-decoration: none;
+  }
+  a:link {
+    color: #485d69;
+  }
+ 
+  a:visited {
+    color: #485d69;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #0073b1;
+  }
+
+  a:active {
+    color: blue
+  }
