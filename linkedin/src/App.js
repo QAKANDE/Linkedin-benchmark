@@ -11,7 +11,6 @@ import Footer from './components/Footer'
 import SideProfile from './components/SideProfile'
 import Experience from './components/Experience'
 import About from './components/About'
-import Post from './components/Post'
 
 
 class App extends React.Component {
@@ -75,9 +74,6 @@ class App extends React.Component {
           <Container>
             <Row className="mx-2">
               <Col lg={8}>
-                <div className='postwrap mt-5'>
-                  <Post />
-                </div>
                 <div className='profilewrap mt-5'>
                   <Profile />
                 </div>
