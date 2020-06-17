@@ -4,12 +4,8 @@ import { FaCamera, FaVideo, FaStickyNote, FaPenSquare } from 'react-icons/fa'
 import "./Post.css"
 
 class Post extends Component {
-    state = {
-        text: ""
-    }
 
     render() {
-        let { text } = this.state;
         return (
             <Form>
                 <span className="a d-block">
