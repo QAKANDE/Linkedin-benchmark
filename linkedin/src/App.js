@@ -8,10 +8,12 @@ import Footer from './components/Footer'
 import SideProfile from './components/SideProfile'
 import Experience from './components/Experience'
 import About from './components/About'
-import Post from './components/Post'
 
+import{BrowserRouter as Router, Route} from 'react-router-dom'
+import SideNews from './components/SideNews'
 function App() {
   return (
+    <>
     <div className="App">
       <NavBar />
       <Container>
@@ -35,8 +37,12 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </div>
+      <Footer/>
+   </div>
+   
+  
+   </>
 
 
   );
