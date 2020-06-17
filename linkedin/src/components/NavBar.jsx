@@ -3,6 +3,7 @@ import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-boots
 import './Navbar.css';
 import { FaLinkedin, FaHome, FaUser, FaSuitcase, FaCommentAlt, FaBell, FaVideo } from 'react-icons/fa';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
+
 class NavBar extends Component {
   render() {
     return (
@@ -19,7 +20,7 @@ class NavBar extends Component {
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav"> */}
           <Nav className="icon-navigation">
-            <Nav.Link className='text-navigation' href="#home">
+            <Nav.Link to="/SideNews" className='text-navigation nav-link' href="#home">
               <FaHome size={18} />Home</Nav.Link>
             <Nav.Link className='text-navigation' href='#mynetwork'>
               <FaUser size={18} />Network</Nav.Link>
