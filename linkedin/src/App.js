@@ -6,10 +6,12 @@ import Profile from './components/Profile'
 import SideProfile from './components/SideProfile'
 import Experience from './components/Experience'
 import About from './components/About'
+import{BrowserRouter as Router, Route} from 'react-router-dom'
+import SideNews from './components/SideNews'
+function App() {
 
-function App(props) {
-  console.log('APP PROPS', props)
   return (
+    <>
     <div className="App">
   <Container>
  <Row className="mx-2">
@@ -27,13 +29,16 @@ function App(props) {
    <Col lg={4}>
      <div className="mt-5">
     <SideProfile/>
+    <Post />
      </div>
    </Col>
  </Row>
       </Container>
-
    </div>
- 
+   
+  
+   </>
+
 
   );
 }

@@ -1,4 +1,3 @@
-
 .profilewrap{
   border:grey solid 1px;
   background-color: white;
@@ -11,6 +10,8 @@
   border:grey solid 1px;
   background-color: white;
 }
-/* .App{
-  background-color: #dde7f0;
-} */
+
+.App{
+  background-color: #F5F5F5;
+}
+
