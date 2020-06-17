@@ -9,7 +9,8 @@ class Experience extends Component {
      }
 
      componentDidMount = async () => {
-         let response= await fetch("https://striveschool.herokuapp.com/api/profile/user23/experiences",{
+        const userID = this.props.match.params.userId;
+         let response= await fetch("https://striveschool.herokuapp.com/api/profile/"+userID+ "/experiences/",{
             method:"GET",
             headers:new Headers({
                 "content-type":"application/json",

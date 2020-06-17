@@ -1,0 +1,8 @@
+.sidewelcome{
+    border:grey solid 1px;
+    background-color: white;
+}
+.feedjumbo{
+    height: 5px !important;
+    background-image: url("https://miro.medium.com/max/1124/1*92adf06PCF91kCYu1nPLQg.jpeg")
+}

@@ -2,28 +2,26 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Row,Col, Container} from 'react-bootstrap'
-import NavBar from './components/NavBar'
 import Profile from './components/Profile'
-import Footer from './components/Footer'
 import SideProfile from './components/SideProfile'
 import Experience from './components/Experience'
 import About from './components/About'
 
-function App() {
+function App(props) {
+  console.log('APP PROPS', props)
   return (
     <div className="App">
-      <NavBar/>
-      <Container>
+  <Container>
  <Row className="mx-2">
-   <Col lg={8}>
+  <Col lg={8}>
      <div className='profilewrap mt-5'>
-    <Profile/>
+  <Profile {...props}/>
      </div>
      <div className='aboutwrap mt-3'>
     <About/>
      </div>
      <div className='experiencewrap mt-3'>
-    <Experience/>
+    <Experience {...props}/>
      </div>
    </Col>
    <Col lg={4}>
@@ -33,7 +31,7 @@ function App() {
    </Col>
  </Row>
       </Container>
-      <Footer/>
+
    </div>
  
 

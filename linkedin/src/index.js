@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {BrowserRouter as Router,Route} from 'react-router-dom'
 import App from './App';
+import Footer from './components/Footer'
+import NavBar from './components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import * as serviceWorker from './serviceWorker';
+import NewsFeedPage from './components/NewsFeedPage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+    <NavBar/>
+    <Route path='/profile/:userId' exact component={App}></Route>
+    <Route path='/newsfeed/' exact component={NewsFeedPage}></Route>
+    </Router>
+    <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );

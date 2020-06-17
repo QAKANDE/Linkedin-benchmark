@@ -1,0 +1,17 @@
+.feedwrapper{
+    height: auto;
+    border:grey solid 1px;
+    background-color: white;
+}
+.create-post{
+    border:grey solid 1px;
+    background-color: white;  
+}
+.feedimage{
+width:100%;
+height: 350px;
+object-fit: cover;
+}
+.feed-footer-icons{
+font-size: large;
+}
