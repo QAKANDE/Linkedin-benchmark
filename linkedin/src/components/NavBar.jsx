@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Navbar.css';
 import { FaLinkedin, FaHome, FaUser, FaSuitcase, FaCommentAlt, FaBell, FaVideo } from 'react-icons/fa';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
@@ -21,9 +21,9 @@ class NavBar extends Component {
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav"> */}
           <Nav className="icon-navigation">
-            <Link to={"/newsfeed/"} className='text-navigation nav-link'>
+            <Link to={"/home/"} className='text-navigation nav-link'>
               <FaHome size={18} />Home</Link>
-        <Nav.Link className='text-navigation' href='#mynetwork'>
+            <Nav.Link className='text-navigation' href='#mynetwork'>
               <FaUser size={18} />Network</Nav.Link>
             <Nav.Link className='text-navigation'>
               <FaSuitcase size={18} />Jobs</Nav.Link>
