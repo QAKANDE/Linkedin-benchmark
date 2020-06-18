@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {BrowserRouter as Router,Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import App from './App';
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
@@ -13,11 +13,11 @@ import NewsFeedPage from './components/NewsFeedPage'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <NavBar/>
-    <Route path='/profile/:userId' exact component={App}></Route>
-    <Route path='/newsfeed/' exact component={NewsFeedPage}></Route>
+      <NavBar />
+      <Route path='/profile/:userId' exact component={App}></Route>
+      <Route path='/home/' exact component={NewsFeedPage}></Route>
     </Router>
-    <Footer/>
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );
