@@ -16,3 +16,30 @@
     border:grey solid 1px;
     background-color: white;  
 }
+a{
+    color: color#485d69;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #0073b1 !important;
+}
+a:link {
+  color: #485d69;
+}
+
+a:visited {
+  color: #485d69;
+  text-decoration: underline;
+}
+
+
+
+a:active {
+  color: blue
+}
+
+.side-profile-footer{
+    margin-top: 25px ;
+    border-top: 1px solid grey !important;
+}
