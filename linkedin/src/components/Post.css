@@ -7,11 +7,10 @@
 .btn:hover
 {
 background-image:none !important;
-background-color:rgb(243,246,248) !important;
+
 }
 .btn {
     align-items: flex-start;
-    background-color: hsl(0, 0%, 100%) !important;
     outline-style: solid;
     outline-color: hsl(210, 14%, 83%);
     border: 0;

@@ -9,21 +9,30 @@ class Profile extends Component {
      }
      handleUpload = async () => {
         const photo = new FormData()
-        photo.append("profile", this.state.profile)
-        let resp = await fetch("https://striveschool.herokuapp.com/api/profile/user16/picture", {
-            method: "POST",
-            body: photo,
-            headers: new Headers({
-                'Authorization': 'Basic ' + "dXNlcjE2OmM5V0VVeE1TMjk0aE42ZkY=",
-            }),
+        photo.append("profile" , this.state.profile)
+        let response = await fetch("https://striveschool.herokuapp.com/api/profile/user23/picture", {
+            method:"POST",
+            body:photo,
+            headers:new Headers({
+                "Authorization":"Basic dXNlcjIzOjJhazlFNXFxQkt2VjJ3a3k="
+            })
         })
-        console.log(resp)
+        if(response.ok)
+        {
+            alert("success")
+        }
+        else {
+            alert("something wrong")
+        }
+        console.log("Image", response)
     }
     handleChange = (e) => {
         const profile = e.target.files[0]
         this.setState({
             profile
         });
+        setTimeout(() => this.handleUpload(), 1000)
+
     }
      componentDidMount = async () => {
         const userID = this.props.match.params.userId;
@@ -51,12 +60,17 @@ class Profile extends Component {
                             <div id="profile-image-wrapper">
                             <img id="profilePic" src={this.state.details.image} alt="Profile pic"/>
                             <div id='bottom-right'>
-                            <i class="fas fa-camera-retro"></i>
+            <label htmlFor="file-input">
+            <i class="fa fa-camera fa-2x " id="edit-profile-icon"></i>
+            </label>
+            <input id="file-input" type="file" profile="file" onChange={(e) => this.handleChange(e)} accept="image/*"/>
                             </div>
+                           
                             </div>
                         </div>
                         <div id="editWrapper" className="ml-auto d-flex flex-row">
                             <div className="my-3">  
+                            
                             <DropdownButton
                         variant="outline-secondary"
                         title="Add Profile Section"
@@ -72,7 +86,9 @@ class Profile extends Component {
 
                             <div className="m-3">  
                                 <Button className='morebtn'>More...</Button>
+                                
                             </div> 
+                            {/* <Button onClick={() => this.handleUpload()}>Upload</Button> */}
            </div>
            </div>
                <div className='container d-flex justify-content-between'>

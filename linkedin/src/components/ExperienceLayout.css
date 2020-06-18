@@ -3,6 +3,13 @@
     width: 5.5rem;
     border-radius: 50%;
 }
+#edit-experience-icon{
+    color: black !important;
+    cursor: pointer;
+}
+#experience-edit-input > input{
+    display: none;
+}
 #experience-list li{
     color: black;
 }

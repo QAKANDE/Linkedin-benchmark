@@ -72,7 +72,16 @@ class TodayNews extends Component {
             </div>
                 </div>
                 <div id="side-profile-footer">
-                    Quadri
+                <div className="d-flex justify-content-between container" >
+                    <span>Qaudri</span>
+                    <span>Qaudri</span>
+                    <span>Qaudri</span>
+                </div>
+                <div className="d-flex justify-content-between mx-2" >
+                    <span>Qaudri</span>
+                    <span>Qaudri</span>
+                    <span>Qaudri</span>
+                </div>
                 </div>
                 </>
           );

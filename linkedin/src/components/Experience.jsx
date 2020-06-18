@@ -8,7 +8,7 @@ import ModalUI from './ModalUI'
 class Experience extends Component {
     state = { 
         experience:[],
-        selected:true  
+        selected:false 
      }
      hideModal = () => {
          this.setState({
@@ -48,7 +48,7 @@ class Experience extends Component {
             {this.state.experience.map((data,index)=>
             <ExperienceLayout bridgerole={data.role} bridgecompany={data.company}
             bridgedata={data.date} bridgearea={data.area} bridgedescription={data.description}
-            key={index}/>
+            key={index} experienceId={data._id}/>
             )}
             </div>
             </>
