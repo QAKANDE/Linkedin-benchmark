@@ -71,6 +71,9 @@ class TodayNews extends Component {
             </div>
             </div>
                 </div>
+                <div id="side-profile-footer">
+                    Quadri
+                </div>
                 </>
           );
     }

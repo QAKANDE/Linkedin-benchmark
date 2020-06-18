@@ -7,15 +7,6 @@ class SideProfile extends Component {
     render() { 
         return ( 
             <div className='wrapper'>
-            {/* <div className="d-flex justify-content-between">
-                <p>Edit public profile & URL</p>
-                <i className="fa fa-edit mx-5"></i>
-            <hr></hr>
-            </div>
-            <div>
-            <p className="d-inline">Add profile in another language</p>
-                <i className="fa fa-edit mx-5 d-inline"></i>
-            </div> */}
             <Row>
                 <Col>
                 <span>Edit public profile & URL</span>

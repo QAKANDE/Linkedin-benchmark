@@ -12,3 +12,7 @@
    margin-top: 2rem;
    height: auto;
 }
+#side-profile-footer{
+    border:grey solid 1px;
+    background-color: white;  
+}

@@ -4,9 +4,27 @@ import './Profile.css'
 import About from './About';
 class Profile extends Component {
     state = { 
+        profile:null,
         details:[]
      }
-
+     handleUpload = async () => {
+        const photo = new FormData()
+        photo.append("profile", this.state.profile)
+        let resp = await fetch("https://striveschool.herokuapp.com/api/profile/user16/picture", {
+            method: "POST",
+            body: photo,
+            headers: new Headers({
+                'Authorization': 'Basic ' + "dXNlcjE2OmM5V0VVeE1TMjk0aE42ZkY=",
+            }),
+        })
+        console.log(resp)
+    }
+    handleChange = (e) => {
+        const profile = e.target.files[0]
+        this.setState({
+            profile
+        });
+    }
      componentDidMount = async () => {
         const userID = this.props.match.params.userId;
         let response = await fetch("https://striveschool.herokuapp.com/api/profile/" +userID, {
@@ -29,8 +47,13 @@ class Profile extends Component {
                <Jumbotron className="jumbo">
         </Jumbotron>
         <div className="d-flex flex-row" style={{height:"75px"}}>
-                        <div id="imageWrapper" className="">
+                        <div id="imageWrapper">
+                            <div id="profile-image-wrapper">
                             <img id="profilePic" src={this.state.details.image} alt="Profile pic"/>
+                            <div id='bottom-right'>
+                            <i class="fas fa-camera-retro"></i>
+                            </div>
+                            </div>
                         </div>
                         <div id="editWrapper" className="ml-auto d-flex flex-row">
                             <div className="my-3">  
