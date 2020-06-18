@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import {Row,Col} from 'react-bootstrap'
 import './Experience.css'
+import ModalUI from './ModalUI'
 import ExperienceLayout from './ExperienceLayout';
 
 
@@ -41,10 +42,10 @@ class Experience extends Component {
                     <i class="fa mt-2 fa-2x fa-edit"></i>
                 </button>
             </div>
-            {/* <ModalUI show={this.state.selected}
+            <ModalUI show={this.state.selected}
             hideModal = {this.hideModal}
             onHide = {this.hideModal}
-            /> */}
+            />
             {this.state.experience.map((data,index)=>
             <ExperienceLayout bridgerole={data.role} bridgecompany={data.company}
             bridgedata={data.date} bridgearea={data.area} bridgedescription={data.description}
