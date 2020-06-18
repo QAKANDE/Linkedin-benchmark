@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
+import Button from '@material-ui/core/Button';
 import {Row,Col} from 'react-bootstrap'
 import './Experience.css'
 import ExperienceLayout from './ExperienceLayout';
+import ModalUI from './ModalUI'
 
 class Experience extends Component {
     state = { 
         experience:[],
-        // show:false
+        selected:true  
      }
-
-     showModal = () => {
-         this.setState({show:true})
+     hideModal = () => {
+         this.setState({
+             selected:false
+         })
      }
-     hideModal =() => {
-         this.setState({show:false})
-     }
-
      componentDidMount = async () => {
         const userID = this.props.match.params.userId;
          let response= await fetch("https://striveschool.herokuapp.com/api/profile/"+userID+ "/experiences/",{
@@ -37,10 +35,16 @@ class Experience extends Component {
             <div className="experience-wrapper">
             <div className="mx-3 d-flex justify-content-between">
                 <h3>Experience</h3>
-                <button type="button" onClick={this.showModal}>
+                <button type="button" onClick={() => {
+                 this.setState({selected:!this.state.selected})
+                }}>
                     <i class="fa mt-2 fa-2x fa-edit"></i>
-                    </button>
+                </button>
             </div>
+            <ModalUI show={this.state.selected}
+            hideModal = {this.hideModal}
+            onHide = {this.hideModal}
+            />
             {this.state.experience.map((data,index)=>
             <ExperienceLayout bridgerole={data.role} bridgecompany={data.company}
             bridgedata={data.date} bridgearea={data.area} bridgedescription={data.description}
@@ -51,8 +55,6 @@ class Experience extends Component {
         );
     }
 }
-// const container = document.createElement("div");
-// document.body.appendChild(container);
-// ReactDOM.render(<Experience />, container);
+
  
 export default Experience;
