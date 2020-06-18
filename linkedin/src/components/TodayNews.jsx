@@ -6,7 +6,8 @@ class TodayNews extends Component {
     render() { 
         return (
             <>
-            <div className='sidenews'>
+            
+            <div className='sidenews '>
                 <div className="container">
                     <small>Today's news and views</small>
                 </div>
@@ -55,6 +56,7 @@ class TodayNews extends Component {
                     </ul>
                 </div>
             </div>
+            
                 <div className='advert mt-4'>
                  <div className='discount container'>
             <div className='d-flex flex-row-reverse'>
@@ -71,10 +73,49 @@ class TodayNews extends Component {
             </div>
             </div>
                 </div>
-                <div id="side-profile-footer">
-                    Quadri
-                </div>
-                </>
+                <div id="side-profile-footer " >
+               <div className = "d-flex justify-content-between container side-profile-footer">
+                   <a href="#"><small>About</small></a>
+                   <a href= "#"><small>Accessibility</small></a>
+                   <a href="#"><small>Help Center</small></a>
+               </div>
+               <div  className = " d-flex justify-content-between ">
+                   <a href="/">
+                   <select id="privacy" style={{fontSize:"small"}}>
+                        <option>
+                        Privacy and Terms
+                         </option>
+                       </select>
+                   </a>
+                   <a href= "#" className="mr-4"><small>AdChoices</small></a>
+                   <a href="#"><small>Advert</small></a>
+
+               </div>
+                
+               <div  className =" d-flex justify-content-between">
+                   <a href="#" className="mr-4"><small>
+                   <select id="privacy">
+                        <option>
+                       Business Services
+                         </option>
+                       </select>
+                       </small>
+                   </a>
+                   <a href= "#"><small>Get Linkedin app</small></a>
+                   </div>
+                   <div className="d-flex justify-content-center">
+                       <a href="#">More</a>
+                   </div>
+
+                   <div className="mt-2 text-center">
+                       LinkedInCorporation @ 2020
+                   </div>
+                   </div>
+
+
+               </>
+                
+                
           );
     }
 }
