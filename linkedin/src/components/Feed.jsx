@@ -49,11 +49,11 @@ class Feed extends Component {
         <hr></hr>
             <span className="container feed-footer-icons mb-4">
             <a href='/'><i class="fa fa-thumbs-up" aria-hidden="true"></i>
-            <span className="mx-2">Like</span></a>
+            <span className="mx-2 feed-footer">Like</span></a>
             <a href='/'><i class="fa fa-comment"></i>
-            <span className="mx-2">Comment</span></a>
+            <span className="mx-2 feed-footer">Comment</span></a>
             <a href='/'><i class="fa fa-share"></i>
-            <span className="mx-2">Share</span></a>
+            <span className="mx-2 feed-footer">Share</span></a>
             </span>
         </div> 
             )}

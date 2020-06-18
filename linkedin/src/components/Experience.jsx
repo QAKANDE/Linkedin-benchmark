@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 import {Row,Col} from 'react-bootstrap'
 import './Experience.css'
 import ExperienceLayout from './ExperienceLayout';
 
 class Experience extends Component {
     state = { 
-        experience:[]
+        experience:[],
+        // show:false
+     }
+
+     showModal = () => {
+         this.setState({show:true})
+     }
+     hideModal =() => {
+         this.setState({show:false})
      }
 
      componentDidMount = async () => {
@@ -28,7 +37,9 @@ class Experience extends Component {
             <div className="experience-wrapper">
             <div className="mx-3 d-flex justify-content-between">
                 <h3>Experience</h3>
-                <i class="fa mt-2 fa-2x fa-edit"></i>
+                <button type="button" onClick={this.showModal}>
+                    <i class="fa mt-2 fa-2x fa-edit"></i>
+                    </button>
             </div>
             {this.state.experience.map((data,index)=>
             <ExperienceLayout bridgerole={data.role} bridgecompany={data.company}
@@ -40,5 +51,8 @@ class Experience extends Component {
         );
     }
 }
+// const container = document.createElement("div");
+// document.body.appendChild(container);
+// ReactDOM.render(<Experience />, container);
  
 export default Experience;

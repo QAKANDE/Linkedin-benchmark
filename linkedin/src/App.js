@@ -7,7 +7,6 @@ import SideProfile from './components/SideProfile'
 import Experience from './components/Experience'
 import About from './components/About'
 import{BrowserRouter as Router, Route} from 'react-router-dom'
-import SideNews from './components/SideNews'
 function App(props) {
 
   return (

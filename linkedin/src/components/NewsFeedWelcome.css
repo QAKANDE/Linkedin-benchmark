@@ -6,3 +6,14 @@
     height: 5px !important;
     background-image: url("https://miro.medium.com/max/1124/1*92adf06PCF91kCYu1nPLQg.jpeg")
 }
+.mx-2{
+    color: rgb(38, 169, 212); 
+}
+#network{
+    color: black;
+    font-weight: 500;
+}
+#connection{
+    color: rgb(38, 169, 212);
+    font-weight: bold;
+}

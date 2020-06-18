@@ -5,6 +5,15 @@
 #bckDiv{
     height:300px;
 }
+h3{
+    color: black;
+}
+span{
+    color: black;
+}
+h5{
+    color: black;
+}
 #imageWrapper{
     height:175px !important;
     width:175px !important;

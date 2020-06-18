@@ -5,80 +5,73 @@ class TodayNews extends Component {
    
     render() { 
         return (
-            <div>
-   <div className="col-4">
-                <div className="news-feed mb-3 card" style={{width:"24rem"}}>
-                <Row className = "d-flex mb-4">
-                    <Col lg={10}><p className="feed">Add to your feed</p></Col>
-                    <Col lg={2}><i class="fa fa-2x fa-exclamation-circle"></i></Col>
-                </Row>
-                <Row className = "d-flex ">
-                    <Col lg={2}><i class="fa fa-3x fa-apple"></i></Col>
-                    <Col  lg={6} className= "d-inline app-news"><p><strong>Apple</strong> <br/> Company Comsumer Electronics</p></Col>
-                    <Col lg ={4}>
-                    <span><Button variant = "outline-primary" size ="lg" className ="ml-2">Follow</Button></span>
-                    <span><i class="fa fa-plus mr-5 "></i></span>
-                    </Col>
-                </Row>
-                <Row className = "d-flex mb-4 ">
-                    <Col lg={2}><i class="fa fa-3x fa-hashtag"></i></Col>
-                    <Col lg={6} className="news"><p>#covid19</p></Col>
-                    <Col lg={4}><span><Button variant = "outline-primary" size ="lg"className ="ml-2">Follow</Button></span>
-                    <span><i class="fa fa-plus mr-5 "></i></span>
-                    </Col>
-                </Row>
-                <Row className = "d-flex mb-4 ">
-                    <Col lg={2}><i class="fa fa-3x fa-hashtag"></i></Col>
-                    <Col lg={6} className= "news"><p>#leadership</p></Col>
-                    <Col lg={4}><span><Button variant = "outline-primary" size ="lg" className ="ml-2">Follow</Button></span>
-                    <span><i class="fa fa-plus mr-5 "></i></span>
-                    </Col>
-                </Row>
-                <div><a href="#" id= "offers">View all recommendations</a></div>
+            <>
+            <div className='sidenews'>
+                <div className="container">
+                    <small>Today's news and views</small>
                 </div>
-                <Row className = "d-flex">
-                    <Col>
-                    <div class="card mb-5 cards" style={{width:"24rem"}}>
-                    <div class="card-body">
-                        <p class="card-text font-weight-bolder">Your dream <br/>job is closer <br/> than you <br/>think.</p>
-                        <button className="bg-primary text-white">See jobs</button>
-                        <img src="https://mittforetag.com/wp-content/uploads/2015/10/linkedin_ny-bild-strategier.jpg" className="card-img"alt=""/>
-                    </div>
-                    </div>
-                    </Col>
-                </Row>
-                    <Row className = "mb-2">
-                        <Col><a href="#">About</a></Col>
-                        <Col> <a href="#">Accessibility</a></Col>
-                        <Col> <a href="#">Help Center</a></Col>
-                    </Row>
-                    <Row className = "mb-2">
-                        <Col lg={6}>
-                        <select id="privacy">
-                        <option>
-                        Privacy and Terms
-                         </option>
-                       </select>
-                        </Col>
-                        <Col lg={4}><a href="#">Add Choices</a></Col>
-                        <Col lg={2}> <a href="#">Advertising</a></Col>
-                    </Row>
-                    <Row className = "mb-2">
-                        <Col lg={6}>
-                        <select id="privacy">
-                        <option>
-                        Business Services
-                         </option>
-                       </select>
-                        </Col>
-                        <Col lg={6}><a href="#">Get the Linkedin App</a></Col>
-                         </Row>
-                         <Row className= "d-flex justify-content-center align-items-center">
-                             <Col lg={6} className = "ml-5"><a href="#">More</a></Col>
-                         </Row>
-                </div>        
-
+                <div>
+                    <ul>
+                        <li>
+                            <a href='/'>
+                            <div>
+                            <small id='newsheadline'>Jaguar LandRover to provide jobs</small><br></br>
+                            <small>1 day ago - 2 Readers</small>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                        <a href='/'>
+                            <div>
+                            <small id='newsheadline'>UK Economy won't change</small><br></br>
+                            <small>5 days ago - 134 Readers</small>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                        <a href='/'>
+                            <div>
+                            <small id='newsheadline'>Changes to furlough scheme</small><br></br>
+                            <small>1 hour ago - 200 Readers</small>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                        <a href='/'>
+                            <div>
+                            <small id='newsheadline'>Black Lives Matter</small><br></br>
+                            <small>3 hour ago - 240 Readers</small>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                        <a href='/'>
+                            <div>
+                            <small id='newsheadline'>Africa Creates New Warheads</small><br></br>
+                            <small>1 hour ago - 200 Readers</small>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+                <div className='advert mt-4'>
+                 <div className='discount container'>
+            <div className='d-flex flex-row-reverse'>
+                <i className="fa fa-ellipsis-h mx-2"></i>
+                <span>Ad</span>
+            </div>
+            <div className="d-flex flex-column">
+            <span>Quadri,invest in your future with this exclusive offer</span>
+            <img className='logo mx-5' alt=''src="https://image.shutterstock.com/image-vector/profile-blank-icon-empty-photo-260nw-535853269.jpg"></img>
+            </div>
+            <p>Enjoy 50% off 2 months of Linkedin Premium!</p>
+            <div className="d-flex justify-content-center">
+            <Button variant="outline-secondary">Get 50% off today</Button>
+            </div>
+            </div>
+                </div>
+                </>
           );
     }
 }
