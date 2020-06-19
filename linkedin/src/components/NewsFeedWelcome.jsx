@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './NewsFeedWelcome.css'
 import {Jumbotron} from 'react-bootstrap'
+import{Link} from 'react-router-dom'
 class NewsFeedWelcome extends Component {
     state = {  }
     render() { 
@@ -11,7 +12,7 @@ class NewsFeedWelcome extends Component {
         </Jumbotron>
         <div className="container d-flex flex-column">
             <p>Welcome,Quadri!</p>
-            <small className="mx-2"><a>Update your profile</a></small>
+          <Link to={'/profile/user23'}><small className="mx-2"><a>Update your profile</a></small></Link>
         </div>
         <hr></hr>
         <div className="container">

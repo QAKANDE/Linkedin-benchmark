@@ -1,6 +1,7 @@
 import React from 'react'
 import './Profile.css'
 import NetworkComp from './NetworkComp'
+import NewsFeedWelcome from './NewsFeedWelcome'
 
 
 class NetworkP extends React.Component{
@@ -33,19 +34,27 @@ class NetworkP extends React.Component{
        
         return(
             <>
-            <div className="container mt-4 d-flex py-5">
+            <div>No pending Invitations</div>
+            <div className="container mt-4  py-5">
                 <div className="row text-center ">
+                    <div className="col-lg-2">
+                        <NewsFeedWelcome/>
+                    </div>
+                    <div className="col-lg-8">
+                    <div className="row">
                     
             {this.state.persons.map(person =>{
 
                 return(
-                    <div className="col" className = "col-lg-3 mr-3">
+                    <div className = "col-lg-3 mb-2">
                     <NetworkComp key = {person.id} data = {person}/>
                     </div>
+                  
                     
                 )
             })}
-            
+            </div>
+              </div>
              </div>
             </div>
             </>
