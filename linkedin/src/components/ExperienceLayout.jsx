@@ -8,7 +8,6 @@ class ExperienceLayout extends Component {
     state = {
         experience: null,
         id:this.props.experienceId
-
     }
  
     handleExperienceUpload = async () => {
@@ -46,7 +45,7 @@ class ExperienceLayout extends Component {
     render() {
         return (
             <div className="d-flex flex-row">
-                <img className="profilePic mx-1" src={this.props.image || '/logo192.png'} alt="Profile pic" />
+                <img className="profilePicture mx-1" src={this.props.image || "https://placebear.com/640/360"} alt="Profile pic" />
                 <div id="experience-edit-input">
                 <label htmlFor="file-input2">
                         <i class="fa fa-camera fa-2x " id="edit-experience-icon"></i>
