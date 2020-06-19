@@ -17,6 +17,10 @@ class Experience extends Component {
         })
     }
     componentDidMount = async () => {
+            this.fetchExperiences()
+    }
+
+    fetchExperiences = async() => {
         const userID = this.props.match.params.userId;
         let response = await fetch("https://striveschool.herokuapp.com/api/profile/" + userID + "/experiences/", {
             method: "GET",
@@ -30,7 +34,8 @@ class Experience extends Component {
             experience
         })
     }
-    render() {
+
+    render(props) {
         return (
             <>
                 <div className="experience-wrapper">
@@ -45,11 +50,12 @@ class Experience extends Component {
                     <ModalUI show={this.state.selected}
                         hideModal={this.hideModal}
                         onHide={this.hideModal}
+                        {...props}
                     />
                     {this.state.experience.map((data, index) =>
                         <ExperienceLayout bridgerole={data.role} bridgecompany={data.company}
                             bridgedata={data.date} bridgearea={data.area} bridgedescription={data.description}
-                            key={index} experienceId={data._id} />
+                            key={index} experienceId={data._id} image={data.image} fetchExperiences={this.fetchExperiences}/>
                     )}
                 </div>
             </>
