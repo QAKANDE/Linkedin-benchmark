@@ -7,6 +7,42 @@
     border:grey solid 1px;
     background-color: white;  
 }
+#start-a-post-col1{
+    border:grey solid 1px;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+   
+}
+#start-a-post-col2{
+    border:grey solid 1px;
+    border-top: 0;
+    border-bottom: 0;
+   
+}
+#start-a-post-col3{
+    border:grey solid 1px;
+    border-top: 0;
+    border-bottom: 0;
+}
+#start-a-post-col4{
+    border:grey solid 1px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    height: 10vh;
+}
+#start-a-post-wrapper{
+    border:grey solid 1px;
+    border-top: 0;
+    border-right: 0;
+    height: 10vh;
+}
+#feed-start-a-post{
+    color: gray;
+    font-weight: bold;
+}
 .feedimage{
 width:100%;
 height: 350px;

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Profile.css'
 import NetworkComp from './NetworkComp'
+import './Networkc.css'
 
 
 class NetworkP extends React.Component{

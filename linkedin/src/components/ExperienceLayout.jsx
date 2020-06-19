@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import './ExperienceLayout.css'
 class ExperienceLayout extends Component {
-    state = {
-        experience: null
+    constructor(props){
+        super(props)
+         console.log("word",this.state)
     }
+    state = {
+        experience: null,
+        id:this.props.experienceId
+
+    }
+ 
     handleExperienceUpload = async () => {
         const ID = this.props.experienceId
         console.log('ID', ID)
         const photo = new FormData()
         photo.append("experience", this.state.experience)
-        let response = await fetch("https://striveschool.herokuapp.com/api/profile/user23/experiences/" + ID + "/picture", {
+        let response = await fetch("https://striveschool.herokuapp.com/api/profile/user23/experiences/" + this.state.id + "/picture", {
             method: "POST",
             body: photo,
             headers: new Headers({
@@ -26,6 +33,7 @@ class ExperienceLayout extends Component {
         console.log("Image", response)
     }
     handleChangeInExperience = (e) => {
+        console.log('other id',this.props.experienceId)
         const experience = e.target.files[0]
         this.setState({
             experience

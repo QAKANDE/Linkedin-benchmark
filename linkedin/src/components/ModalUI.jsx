@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom'
 import { Modal, Form, Col, Button, FormGroup, FormControl } from 'react-bootstrap'
 class ModalUI extends Component {
+    constructor(props) {
+        super(props)
+   console.log(this.props.match)
+    }
  state = {
      newexperience:{
         role:"",
        company:"",
-       date:"",
-     description:"",
+       startDate:"",
+       endDate:null,
+    description:"",
         area:""
      }
     }
 
     submitExperience =  async (e) => {
-        const userID = this.props.match.params.userId;
         e.preventDefault()
-        let response = await fetch ("https://striveschool.herokuapp.com/api/profile/" +userID+ "/experiences",{
+        const userID = this.props.match.params.userId;
+      
+        let response = await fetch ("https://striveschool.herokuapp.com/api/profile/userName/experiences",{
             method:"POST",
             body: JSON.stringify(this.state.newexperience),
-            Headers:({
+            headers:{
                 'Content-Type' : 'Application/json',
-                'Authorization':'Basic dXNlcjIzOjJhazlFNXFxQkt2VjJ3a3k='
-            })  
+                "Authorization":"Basic dXNlcjIzOjJhazlFNXFxQkt2VjJ3a3k="
+            }  
         })
 
-        let newexperience = await response.json()
+       
         if (response.ok){
+            let newexperience = await response.json()
             console.log(response)
             alert("success")
             // this.setState({
@@ -36,18 +44,19 @@ class ModalUI extends Component {
             //      }
             // })
         }
-        // else{
-        //     alert("err")
-        //     let json = await response.json()
-        // }
+        else{
+        alert("err")
+        }
     }
      updateExperience = (event) => {
+        
          let newexperience = this.state.newexperience;
          let id = event.currentTarget.id;
          newexperience[id] = event.currentTarget.value;
          this.setState({
              newexperience
          })
+         console.log("bla bla", this.state)
      }
 
     render() { 
@@ -70,7 +79,7 @@ class ModalUI extends Component {
                                     placeholder="Ex: CEO"
                                     id="role"
                                     value={this.state.newexperience.role}
-                                    onChange={this.updateExperience}
+                                    onChange={(e) =>this.updateExperience(e)}
                                     />
                                 </Form.Group>
                             </Form.Row>
@@ -102,8 +111,8 @@ class ModalUI extends Component {
                                 <FormGroup>
                                     <Form.Label htmlFor="date">Start Date</Form.Label>
                                     <FormControl
-                                           id="date"
-                                           value={this.state.newexperience.date}
+                                           id="startDate"
+                                           value={this.state.newexperience.startDate}
                                            onChange={this.updateExperience}
                                         type="date"
                                     />
@@ -131,4 +140,4 @@ class ModalUI extends Component {
     }
 }
  
-export default ModalUI;
+export default withRouter(ModalUI);

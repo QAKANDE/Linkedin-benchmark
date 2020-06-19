@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './Feed.css'
-import {Form} from 'react-bootstrap'
+import {Form,Row,Col} from 'react-bootstrap'
 import Post from './Post'
 import { FaCamera, FaVideo, FaStickyNote, FaPenSquare } from 'react-icons/fa'
 class Feed extends Component {
     state = {
         posts: []
+        // newpost:{
+        //     text:""
+        // }
     }
+  
     componentDidMount = async () => {
         let response = await fetch("https://striveschool.herokuapp.com/api/posts/", {
             method: "GET",
@@ -20,35 +24,50 @@ class Feed extends Component {
             posts
         })
     }
+    // handleNewPost = (e) => {
+    //     let newpost = this.state.newpost
+    //     let id  = e.currentTarget.id;
+    //     newpost[id] = e.currentTarget.value
+    //     this.setState({
+    //         newpost
+    //     })
+    // }
     render() {
         return (
             <>
                 <div className="create-post">
-                <Form id='form'>
-                <span className="a d-block">
-                    <button className="btn-post">
-                        <span>
-                            <i><FaPenSquare className="pen mx-1" style={{ color: "#666666" }} size={30} /></i>
-                        </span>
-                        <span>
-                            <i><div className="b px-1 py-1">Start a post</div></i>
-                        </span>
-                    </button>
-                    <button className="btn"><i><FaCamera style={{ color: "#666666" }} size={25} /></i></button>
-                    <button className="btn"><i><FaVideo style={{ color: "#666666" }} size={25} /></i></button>
-                    <button className="btn"><i><FaStickyNote style={{ color: "#666666" }} size={25} /></i></button>
-                </span>
-                <button className="btn-post-article default py-0">
-                    <span>
-                        <i className="article-link">Write an article</i>
-                    </span>
-                    <span>
-                        <small className="c" style={{ color: "#666666" }}>on LinkedIn</small>
-                    </span>
-                </button>
-            </Form >
+               <div id='start-a-post-wrapper'>
+                  <Row className="container">
+                <Col xl={5} id='start-a-post-col1'>
+               <a type="button" id="feed-start-a-post">
+               <i class="fa mt- fa-1x fa-edit"></i> Start a post
+               </a>
+                </Col>
+              <Col xl={2} id='start-a-post-col2'>
+                  <a>
+              <i className="mx-3 mt-3"><FaCamera style={{ color: "#666666" }} size={25} /></i>
+                  </a>
+                </Col> 
+              <Col xl={2} id='start-a-post-col3'>
+              <i className="mx-3"><FaVideo style={{ color: "#666666" }} size={25} /></i>
+                </Col> 
+              <Col xl={2} id='start-a-post-col4'>
+              <i className="mx-3"><FaStickyNote style={{ color: "#666666" }} size={25} /></i>
+                </Col>    
+                </Row> 
+               </div>
+               <div>
+                   <div>
+                       <span className="mx-1" >
+                       <small>
+                        Write an article 
+                        </small>
+                        <small className="mx-2">on Linkedin</small>
+                       </span>
+                   </div>
+               </div>
                 </div>
-                {this.state.posts.map((post, index) =>
+                {this.state.posts.splice(2,6).map((post, index) =>
                     <div className='feedwrapper mt-2' key={index}>
                         <div className="d-flex justify-content-between container">
                             <span><a href="/">Quadri Akande Omofolarin</a><small className="mx-1">likes this</small></span>
