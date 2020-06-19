@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import * as serviceWorker from './serviceWorker';
 import NewsFeedPage from './components/NewsFeedPage'
+import NetworkP from './components/NetworkP'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
       <NavBar />
       <Route path='/profile/:userId' exact component={App}></Route>
       <Route path='/home/' exact component={NewsFeedPage}></Route>
+      <Route path='/NetworkP' exact component= {NetworkP}></Route>
     </Router>
     <Footer />
   </React.StrictMode>,

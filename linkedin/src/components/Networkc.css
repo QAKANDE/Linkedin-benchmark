@@ -1,0 +1,11 @@
+
+
+#Card{
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+card{
+    position: relative;
+}

@@ -23,8 +23,8 @@ class NavBar extends Component {
           <Nav className="icon-navigation">
             <Link to={"/home/"} className='text-navigation nav-link'>
               <FaHome size={18} />Home</Link>
-            <Nav.Link className='text-navigation' href='#mynetwork'>
-              <FaUser size={18} />Network</Nav.Link>
+            <Link to={"/NetworkP"} className='text-navigation nav-link' href='#mynetwork'>
+              <FaUser size={18} />Network</Link>
             <Nav.Link className='text-navigation'>
               <FaSuitcase size={18} />Jobs</Nav.Link>
             <Nav.Link className='text-navigation'>
