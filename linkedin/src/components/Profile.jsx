@@ -85,10 +85,8 @@ class Profile extends Component {
                             </div>  
 
                             <div className="m-3">  
-                                <Button className='morebtn'>More...</Button>
-                                
+                                <Button className='morebtn'>More...</Button>                                
                             </div> 
-                            {/* <Button onClick={() => this.handleUpload()}>Upload</Button> */}
            </div>
            </div>
                <div className='container d-flex justify-content-between'>

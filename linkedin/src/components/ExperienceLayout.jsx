@@ -4,7 +4,7 @@ class ExperienceLayout extends Component {
     state = {
         experience: null
     }
-    handleUpload = async () => {
+    handleExperienceUpload = async () => {
         const ID = this.props.experienceId
         console.log('ID', ID)
         const photo = new FormData()
@@ -18,6 +18,7 @@ class ExperienceLayout extends Component {
         })
         if (response.ok) {
             alert("success")
+            this.props.fetchExperiences()
         }
         else {
             alert("something wrong")
@@ -28,21 +29,21 @@ class ExperienceLayout extends Component {
         const experience = e.target.files[0]
         this.setState({
             experience
-        }, () => {
-            console.log("I'm here")
         });
-        // setTimeout(() => this.handleUpload(), 50)
+        // , () => {
+        //     console.log("I'm here")
+        setTimeout(() => this. handleExperienceUpload(), 1000)
 
     }
     render() {
         return (
             <div className="d-flex flex-row">
-                <img className="profilePic mx-1" src={this.state.experience} alt="Profile pic" />
+                <img className="profilePic mx-1" src={this.props.image || '/logo192.png'} alt="Profile pic" />
                 <div id="experience-edit-input">
-                    <label htmlFor="file-input">
+                <label htmlFor="file-input2">
                         <i class="fa fa-camera fa-2x " id="edit-experience-icon"></i>
                     </label>
-                    <input id="file-input" type="file" profile="file" onChange={(e) => this.handleChangeInExperience(e)} accept="image/*" />
+                    <input id="file-input2" type="file" profile="file" onChange={(e) => this.handleChangeInExperience(e)} accept="image/*" />
                 </div>
                 <ul id="experience-list">
                     <li id="job">{this.props.bridgerole}</li>
