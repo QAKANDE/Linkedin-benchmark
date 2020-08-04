@@ -2,12 +2,14 @@ import React from 'react'
 import './Profile.css'
 import NetworkComp from './NetworkComp'
 import NewsFeedWelcome from './NewsFeedWelcome'
+import { Spinner } from 'react-bootstrap'
 
 
 class NetworkP extends React.Component{
 
     state = {
-        persons:[]
+        persons:[],
+        loading:true
     }
 
   getNetwork = async () => {
@@ -20,7 +22,7 @@ class NetworkP extends React.Component{
 
             let persons= await response.json()
             console.log(persons)
-            this.setState({persons:persons})
+            this.setState({persons:persons,loading:false})
             console.log(this.state.persons)
     }
 
@@ -42,9 +44,9 @@ class NetworkP extends React.Component{
                     </div>
                     <div className="col-lg-8">
                     <div className="row">
-                    
+       
             {this.state.persons.map(person =>{
-
+                
                 return(
                     <div className = "col-lg-3 mb-2">
                     <NetworkComp key = {person.id} data = {person}/>
@@ -52,6 +54,7 @@ class NetworkP extends React.Component{
                   
                     
                 )
+               
             })}
             </div>
               </div>
