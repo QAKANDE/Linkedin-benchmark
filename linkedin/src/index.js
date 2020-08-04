@@ -10,6 +10,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import * as serviceWorker from './serviceWorker';
 import NewsFeedPage from './components/NewsFeedPage'
 import NetworkP from './components/NetworkP'
+import Messages from './components/Messages'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path='/profile/:userId' exact component={App}></Route>
       <Route path='/home/' exact component={NewsFeedPage}></Route>
       <Route path='/NetworkP' exact component= {NetworkP}></Route>
+      <Route path="/messages" exact component = {Messages}></Route>
       
      
     </Router>

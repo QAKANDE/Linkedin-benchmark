@@ -27,8 +27,8 @@ class NavBar extends Component {
               <FaUser size={18} />Network</Link>
             <Nav.Link className='text-navigation'>
               <FaSuitcase size={18} />Jobs</Nav.Link>
-            <Nav.Link className='text-navigation'>
-              <FaCommentAlt size={18} />Messaging</Nav.Link>
+            <Link to="/Messages" className='text-navigation nav-link'>
+              <FaCommentAlt size={18} />Messaging </Link>
             <Nav.Link className='text-navigation'>
               <FaBell size={18} />Notifications</Nav.Link>
             <Nav.Link className="text-navigation">
