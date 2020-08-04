@@ -1,19 +1,22 @@
-.sidewelcome{
-    border:grey solid 1px;
-    background-color: white;
+#sideWelcomeWrapper {
+  position: sticky;
 }
-.feedjumbo{
-    height: 5px !important;
-    background-image: url("https://miro.medium.com/max/1124/1*92adf06PCF91kCYu1nPLQg.jpeg")
+.sidewelcome {
+  border: grey solid 1px;
+  background-color: white;
 }
-.mx-2{
-    color: rgb(38, 169, 212); 
+.feedjumbo {
+  height: 5px !important;
+  background-image: url("https://miro.medium.com/max/1124/1*92adf06PCF91kCYu1nPLQg.jpeg");
 }
-#network{
-    color: black;
-    font-weight: 500;
+.mx-2 {
+  color: rgb(38, 169, 212);
 }
-#connection{
-    color: rgb(38, 169, 212);
-    font-weight: bold;
+#network {
+  color: black;
+  font-weight: 500;
+}
+#connection {
+  color: rgb(38, 169, 212);
+  font-weight: bold;
 }

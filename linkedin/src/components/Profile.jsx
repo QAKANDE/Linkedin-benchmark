@@ -70,7 +70,6 @@ class Profile extends Component {
                         </div>
                         <div id="editWrapper" className="ml-auto d-flex flex-row">
                             <div className="my-3">  
-                            
                             <DropdownButton
                         variant="outline-secondary"
                         title="Add Profile Section"
