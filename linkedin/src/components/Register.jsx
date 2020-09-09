@@ -8,9 +8,7 @@ export default class signin extends Component {
 
     render() {
         return (
-            <Container className="text-center" style={{
-                backgroundColor: "#067DA6"
-            }}>
+            <Container style={{ backgroundColor: "#067DA6", width: "1263px", margin: "auto" }}>
                 <Row>
                     < Col lg={{ span: 6, offset: 3 }} className="text-center">
                         <img

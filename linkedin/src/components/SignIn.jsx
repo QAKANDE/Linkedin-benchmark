@@ -7,7 +7,7 @@ export default class SignIn extends Component {
 
     render() {
         return (
-            <Container>
+            <Container style={{ margin: "auto" }}>
                 <Row>
                     <Col lg={{ span: 6, offset: 3 }} className="text-center">
                         <img
