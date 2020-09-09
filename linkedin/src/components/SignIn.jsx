@@ -3,7 +3,7 @@ import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import "./SignIn.css"
 
-export default class signin extends Component {
+export default class SignIn extends Component {
 
     render() {
         return (
@@ -48,12 +48,8 @@ export default class signin extends Component {
                             />
                         </Form.Group>
                         <Button
-                            className="w-100"
-                            style={{ borderRadius: "20em", fontSize: "20px", fontWeight: "500" }}
-                        // onClick={() => {
-                        //     });
-                        // }}
-                        >
+                            className="w-100 mt-3"
+                            style={{ borderRadius: "20em", fontSize: "20px", fontWeight: "500" }}>
                             Sign in
                         </Button>
                         <label className="myCheckbox mt-3">
