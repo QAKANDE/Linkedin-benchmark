@@ -24,7 +24,7 @@ ReactDOM.render(
       {/* <Route path='/home/' exact component={NewsFeedPage}></Route> */}
       {/* <Route path='/NetworkP' exact component={NetworkP}></Route> */}
       {/* <Route path="/messages" exact component={Messages}></Route> */}
-      <Route path="/Feed" exact component={Feed} />
+      <Route path="/new" exact component={New} />
     </Router>
     {/* <Footer /> */}
   </React.StrictMode>,
