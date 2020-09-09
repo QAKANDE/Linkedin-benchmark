@@ -12,7 +12,7 @@ export default class SignIn extends Component {
                     <Col lg={{ span: 6, offset: 3 }} className="text-center">
                         <img
                             className="img-fluid"
-                            src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2003%E2%80%932011.png"
+                            src="https://f.hubspotusercontent30.net/hubfs/2235233/blog-import/2020/20-08-Aug/sm-icons-linkedin-logo.png"
                             style={{ maxHeight: "45px", marginTop: "4.7em" }}
                             alt=""
                         />
@@ -47,21 +47,20 @@ export default class SignIn extends Component {
                                 placeholder="Password"
                             />
                         </Form.Group>
+                        <label className="myCheckbox mt-3" style={{ float: "left" }}>
+                            <input type="checkbox" className="checkboxx mr-2" />
+                            <a style={{ fontWeight: "350", fontSize: "17px" }}> Remember Me.</a><a style={{ fontWeight: "500", color: "#0A66C2", fontSize: "17px" }}> Learn More.</a>
+
+                        </label>
                         <Button
                             className="w-100 mt-3"
                             style={{ borderRadius: "20em", fontSize: "20px", fontWeight: "500" }}>
                             Sign in
                         </Button>
-                        <label className="myCheckbox mt-3">
-
-                            <input type="checkbox" />
-                            <a style={{ fontWeight: "350", fontSize: "20px" }}> Remember Me.</a><a style={{ fontWeight: "500", color: "#0A66C2", fontSize: "20px" }}> Learn More.</a>
-
-                        </label>
-                        <div className="mt-4" style={{ fontWeight: "500", color: "#0A66C2", fontSize: "20px" }}>
+                        <div className="mt-4" style={{ fontWeight: "500", color: "#0A66C2", fontSize: "17px" }}>
                             <a>Forgot Password ?</a>
                             <p className="mt-3" style={{ fontWeight: "350" }}>
-                                New to LinkedIn? <Link to={"/register"} className="button secondary text-center" style={{ fontWeight: "500", color: "#0A66C2", fontSize: "20px" }} >Join now.</Link>
+                                New to LinkedIn? <Link to={"/register"} className="button secondary text-center" style={{ fontWeight: "500", color: "#0A66C2", fontSize: "17px" }} >Join now.</Link>
                             </p>
                         </div>
                     </Col>

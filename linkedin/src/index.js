@@ -6,11 +6,11 @@ import './index.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import App from './App';
 import Footer from './components/Footer'
-import Feed from './components/Feed'
+import New from './components/New'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import * as serviceWorker from './serviceWorker';
-// import NewsFeedPage from './components/NewsFeedPage'
+// import NNewPage from './components/NewsFeedPage'
 // import NetworkP from './components/NetworkP'
 // import Messages from './components/Messages'
 
