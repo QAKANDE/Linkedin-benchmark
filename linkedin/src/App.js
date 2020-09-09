@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Dropdown, Image } from 'react-bootstrap'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import NavBar from './components/NavBar';
 import Content from './components/Content'
 import { Row, Col, Container } from 'react-bootstrap'
@@ -70,6 +72,7 @@ class App extends React.Component {
           }
           />
           <Route path="/:username" component={Content} />
+
 
           <Container>
             <Row className="mx-2">
