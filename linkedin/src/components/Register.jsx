@@ -8,9 +8,11 @@ export default class signin extends Component {
 
     render() {
         return (
-            <Container className="text-center">
+            <Container className="text-center" style={{
+                backgroundColor: "#067DA6"
+            }}>
                 <Row>
-                    <Col lg={{ span: 6, offset: 3 }} className="text-center">
+                    < Col lg={{ span: 6, offset: 3 }} className="text-center">
                         <img
                             className="img-fluid"
                             src={linkedin}
@@ -21,7 +23,7 @@ export default class signin extends Component {
                     <div className="mt-3">
                         <h3 style={{ color: "white", textAlign: "center", margin: "0 20rem 1.5rem" }}>Make the most of your professional life</h3>
                     </div>
-                </Row>
+                </Row >
 
 
                 <Row >
@@ -30,11 +32,11 @@ export default class signin extends Component {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formGridName">
                                     <Form.Label style={{ fontSize: "14px" }}>Name</Form.Label>
-                                    <Form.Control type="Name" placeholder="Enter Name" />
+                                    <Form.Control type="Name" required placeholder="Enter Name" />
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="formGridUsername">
                                     <Form.Label style={{ fontSize: "14px" }}>Surname</Form.Label>
-                                    <Form.Control type="Surname" placeholder="Surname" />
+                                    <Form.Control type="Surname" required placeholder="Surname" />
                                 </Form.Group>
                             </Form.Row>
 
@@ -43,64 +45,57 @@ export default class signin extends Component {
                                 <Form.Control placeholder="Curious" />
                             </Form.Group>
                             <Form.Row>
-                                <Form.Group as={Col} controlId="formGridTitle">
+                                <Form.Group as={Col} required controlId="formGridTitle">
                                     <Form.Label style={{ fontSize: "14px" }}>Title</Form.Label>
                                     <Form.Control />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridArea">
                                     <Form.Label style={{ fontSize: "14px" }}>Area</Form.Label>
-                                    <Form.Control as="select" defaultValue="Choose...">
+                                    <Form.Control as="select" required defaultValue="Choose...">
                                         <option>Choose...</option>
                                         <option>...</option>
                                     </Form.Control>
+                                </Form.Group>
+                                <Form.Group as={Col} required controlId="formGridUsername">
+                                    <Form.Label style={{ fontSize: "14px" }}>Username</Form.Label>
+                                    <Form.Control />
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group>
                                     <Form.File
-                                        className="position-relative"
+                                        style={{ textAlign: "center" }}
                                         required
                                         name="file"
-                                        label="File"
+                                        label=""
                                         id="validationFormik107"
-                                        feedbackTooltip
-                                    />
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="formGridUsername">
-                                    <Form.Label style={{ fontSize: "14px" }}>Username</Form.Label>
-                                    <Form.Control />
+                                        feedbackTooltip></Form.File>
                                 </Form.Group>
                             </Form.Row>
 
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formGridEmail">
                                     <Form.Label style={{ fontSize: "14px" }}>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter email" />
+                                    <Form.Control type="email" required placeholder="Enter email" />
                                 </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
                                 <Form.Group as={Col} controlId="formGridPassword">
                                     <Form.Label style={{ fontSize: "14px" }}>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" />
+                                    <Form.Control type="password" required placeholder="Password" />
                                 </Form.Group>
                             </Form.Row>
-
                         </Form>
 
                         <Button
-                            className="w-100"
+                            className="w-100 mt-3"
                             style={{ borderRadius: "5px", fontSize: "20px", fontWeight: "500" }}
                         >
                             Agree & Join
                         </Button>
 
-
-
-                        <Button class="button Facebook">
+                        <Button className="button Facebook mt-3">
+                            <i className="fab fa-facebook-square"></i>
                             <span>Continue with Facebook</span>
-                            <i class="fab fa-facebook-square"></i>
                         </Button>
 
                         <div className="mt-4" style={{ fontWeight: "500", color: "#0A66C2", fontSize: "20px" }}>
