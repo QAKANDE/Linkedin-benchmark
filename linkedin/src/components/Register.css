@@ -1,0 +1,14 @@
+
+  .form-group{
+    margin: 0 0 0px !important;
+  }
+  #Loginbuttons {
+    justify-content: space-between;
+    padding-top: 20%;
+    text-align: center;
+  }
+    
+  .fa-facebook-square {
+    color: white;
+    font-size: 4vh;
+  }

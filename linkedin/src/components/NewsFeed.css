@@ -1,30 +1,30 @@
 #chatMessages {
-  width: 20%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  background-color: #283e4a;
-  text-align: start;
-  font-size: 16px;
-}
-
-.modal-dialog {
-  width: 20%;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  height: auto;
-  overflow: hidden;
-}
-.second-modal-dialog {
-  width: 25%;
-  position: fixed;
-  bottom: 0;
-  right: -10;
-  margin: 0;
-}
-#message-list {
-  list-style: none;
-}
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    background-color: #283e4a;
+    text-align: start;
+    font-size: 16px;
+  }
+  
+  .modal-dialog {
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    height: auto;
+    overflow: hidden;
+  }
+  .second-modal-dialog {
+    width: 25%;
+    position: fixed;
+    bottom: 0;
+    right: -10;
+    margin: 0;
+  }
+  #message-list {
+    list-style: none;
+  }
