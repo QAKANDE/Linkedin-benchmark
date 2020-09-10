@@ -5,6 +5,58 @@ import "./SignIn.css"
 
 export default class SignIn extends Component {
 
+    state={
+        loginDetails:{
+            email:"",
+            password:""
+        }
+    }
+    updateLogin = (event) => {
+        let newLoginDetails = this.state.loginDetails;
+        let id = event.currentTarget.id;
+        newLoginDetails[id] = event.currentTarget.value;
+        this.setState({
+            newLoginDetails
+        })
+        // console.log("bla bla", this.state)
+    }
+    loginHandler = async () => {
+        let userInfo = {
+          email: this.state.loginDetails.email,
+          password: this.state.loginDetails.password,
+        };
+        let response = await fetch("http://localhost:3008/profile/login", {
+          method: "POST",
+        //   credentials: "include",
+          body: JSON.stringify(userInfo),
+          headers: new Headers({
+            "content-Type": "application/json",
+          }),
+        });
+        const token = await response.json()
+        localStorage["accessToken"] = token.token
+        if(localStorage.accessToken){
+            const authorize = await fetch("http://localhost:3008/profile/authorizeUser" , {
+                headers:{
+                    "Authorization": "Bearer " + localStorage.accessToken
+                }
+            })
+            if(authorize.ok){
+                this.props.history.push("/profile/user23");
+            }
+        }
+            else
+            {
+                    alert("Please Log in")
+                }
+        console.log(token)
+      };
+
+    //   LoginWithLinkedinHandler = async () => {
+    //       const response = await ("http://localhost:3008/profile/auth/linkedin")
+    //       console.log(response)
+    //   }
+
     render() {
         return (
             <Container style={{ margin: "auto" }}>
@@ -30,21 +82,23 @@ export default class SignIn extends Component {
                     <Col lg={{ span: 4, offset: 4 }} className="text-center">
                         <Form.Group style={{ marginTop: "0" }}>
                             <Form.Control
-                                // isValid={this.state.Valid}
-                                // onChange={(e) => {
-                                // }}
+                            htmlFor="email"
+                                value={this.state.loginDetails.email}
                                 className="mb-3"
                                 type="email"
+                                id="email"
                                 placeholder="Email or Phone"
                                 size="lg"
+                                onChange={(e) =>this.updateLogin(e)}
                             />
                             <Form.Control
+                            htmlFor="password"
+                                value={this.state.loginDetails.password}
                                 size="lg"
-                                // isValid={this.state.pValid}
-                                // onChange={()
-                                // }}
+                                id="password"
                                 type="password"
                                 placeholder="Password"
+                                onChange={(e) =>this.updateLogin(e)}
                             />
                         </Form.Group>
                         <label className="myCheckbox mt-3" style={{ float: "left" }}>
@@ -54,9 +108,11 @@ export default class SignIn extends Component {
                         </label>
                         <Button
                             className="w-100 mt-3"
-                            style={{ borderRadius: "20em", fontSize: "20px", fontWeight: "500" }}>
+                            style={{ borderRadius: "20em", fontSize: "20px", fontWeight: "500" }} onClick={this.loginHandler}>
                             Sign in
                         </Button>
+                        <a href="http://localhost:3008/profile/auth/linkedin">Linkedin</a>
+                        <a>Facebook</a>
                         <div className="mt-4" style={{ fontWeight: "500", color: "#0A66C2", fontSize: "17px" }}>
                             <a>Forgot Password ?</a>
                             <p className="mt-3" style={{ fontWeight: "350" }}>
