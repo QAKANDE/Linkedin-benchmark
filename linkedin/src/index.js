@@ -11,17 +11,19 @@ import * as serviceWorker from './serviceWorker';
 import NewsFeedPage from './components/NewsFeedPage'
 import NetworkP from './components/NetworkP'
 import Messages from './components/Messages'
+import SignIn from './components/SignIn'
+import register from './components/Register'
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <NavBar />
+      <Route path='/' exact component={SignIn}/>
+      <Route path='/register' exact component={register}/>
       <Route path='/profile/:userId' exact component={App}></Route>
       <Route path='/home/' exact component={NewsFeedPage}></Route>
       <Route path='/NetworkP' exact component= {NetworkP}></Route>
       <Route path="/messages" exact component = {Messages}></Route>
-      
-     
     </Router>
     <Footer />
   </React.StrictMode>,

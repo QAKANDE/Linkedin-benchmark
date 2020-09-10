@@ -6,12 +6,14 @@ import Profile from './components/Profile'
 import SideProfile from './components/SideProfile'
 import Experience from './components/Experience'
 import About from './components/About'
+import NavBar from './components/NavBar'
 import{BrowserRouter as Router, Route} from 'react-router-dom'
 
 function App(props) {
 
   return (
     <div className="App">
+      <NavBar/>
   <Container>
  <Row className="mx-2">
   <Col lg={8}>
