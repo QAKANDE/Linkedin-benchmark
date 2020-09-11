@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Button, Form, CardImg } from "react-bootstrap";
 import { FacebookLoginButton, LinkedInLoginButton } from "react-social-login-buttons";
 import { Link } from 'react-router-dom';
-// import linkedin from '../assets/linkedin.png';
+import linkedin from '../assets/linkedin.png';
 import "./Register.css"
 
 export default class signin extends Component {
@@ -14,7 +14,7 @@ export default class signin extends Component {
                     < Col lg={{ span: 6, offset: 3 }} className="text-center">
                         <img
                             className="img-fluid"
-                            src="/"
+                            src={linkedin}
                             style={{ maxHeight: "45px", marginTop: "2rem", color: "white" }}
                             alt=""
                         />
@@ -333,7 +333,7 @@ export default class signin extends Component {
 
 
 
-                        <LinkedInLoginButton className="mt-3" style={{ height: "2.5rem" }}><span style={{ color: "white", fontSize: "17px", fontWeight: "400" }}>Agree & Join</span></LinkedInLoginButton>
+                        <LinkedInLoginButton className="mt-3" style={{ height: "2.8rem" }}><span style={{ color: "white", fontSize: "17px", fontWeight: "400" }}>Agree & Join</span></LinkedInLoginButton>
                         <div>OR</div>
                         <FacebookLoginButton className="mt-2" style={{ height: "2.5rem" }}><span style={{ color: "white", fontSize: "17px", fontWeight: "400" }}> Continue with Facebook</span></FacebookLoginButton>
 
@@ -342,8 +342,6 @@ export default class signin extends Component {
                                 Already in LinkedIn?<Link to={"/"} className="button secondary text-center" style={{ fontWeight: "500", color: "#0A66C2", fontSize: "17px" }} > Sign In.</Link>
                             </p>
                         </div>
-
-
                     </Col>
                 </Row>
 
