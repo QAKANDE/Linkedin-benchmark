@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import Profile from './Profile'
 import "./SignIn.css"
 
 export default class SignIn extends Component {
@@ -11,6 +12,7 @@ export default class SignIn extends Component {
             password:""
         }
     }
+
     updateLogin = (event) => {
         let newLoginDetails = this.state.loginDetails;
         let id = event.currentTarget.id;
@@ -20,6 +22,7 @@ export default class SignIn extends Component {
         })
         // console.log("bla bla", this.state)
     }
+ 
     loginHandler = async () => {
         let userInfo = {
           email: this.state.loginDetails.email,
@@ -27,7 +30,6 @@ export default class SignIn extends Component {
         };
         let response = await fetch("http://localhost:3008/profile/login", {
           method: "POST",
-        //   credentials: "include",
           body: JSON.stringify(userInfo),
           headers: new Headers({
             "content-Type": "application/json",
@@ -35,6 +37,7 @@ export default class SignIn extends Component {
         });
         const token = await response.json()
         localStorage["accessToken"] = token.token
+        localStorage["email"] = this.state.loginDetails.email
         if(localStorage.accessToken){
             const authorize = await fetch("http://localhost:3008/profile/authorizeUser" , {
                 headers:{
